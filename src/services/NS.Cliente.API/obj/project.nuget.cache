@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "0SxiHVcqqL3+pjuvXgKS1vCJ+EIvpyI8zsJF3WAcLmYQCxRsZ9gGckTFkd4w2Mbe3hAF3LSA2eXardTedw6+Ig==",
+  "success": true,
+  "projectFilePath": "D:\\02. Projetos\\NerdStore\\src\\services\\NS.Cliente.API\\NS.Cliente.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Cleber\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512"
+  ],
+  "logs": []
+}
