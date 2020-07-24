@@ -67,8 +67,12 @@ D:\02. Projetos\NerdStore\src\services\NS.Autenticacao.API\bin\Debug\netcoreapp3
 D:\02. Projetos\NerdStore\src\services\NS.Autenticacao.API\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\02. Projetos\NerdStore\src\services\NS.Autenticacao.API\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 D:\02. Projetos\NerdStore\src\services\NS.Autenticacao.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+D:\02. Projetos\NerdStore\src\services\NS.Autenticacao.API\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+D:\02. Projetos\NerdStore\src\services\NS.Autenticacao.API\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+D:\02. Projetos\NerdStore\src\services\NS.Autenticacao.API\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+D:\02. Projetos\NerdStore\src\services\NS.Autenticacao.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+D:\02. Projetos\NerdStore\src\services\NS.Autenticacao.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\02. Projetos\NerdStore\src\services\NS.Autenticacao.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
 D:\02. Projetos\NerdStore\src\services\NS.Autenticacao.API\obj\Debug\netcoreapp3.1\NS.Autenticacao.API.csproj.CoreCompileInputs.cache
 D:\02. Projetos\NerdStore\src\services\NS.Autenticacao.API\obj\Debug\netcoreapp3.1\NS.Autenticacao.API.MvcApplicationPartsAssemblyInfo.cs
 D:\02. Projetos\NerdStore\src\services\NS.Autenticacao.API\obj\Debug\netcoreapp3.1\NS.Autenticacao.API.MvcApplicationPartsAssemblyInfo.cache
-D:\02. Projetos\NerdStore\src\services\NS.Autenticacao.API\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
-D:\02. Projetos\NerdStore\src\services\NS.Autenticacao.API\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
