@@ -5,6 +5,8 @@ using Microsoft.IdentityModel.Tokens;
 using NS.Autenticacao.API.Extensions;
 using NS.Autenticacao.API.Models.Usuario;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
@@ -15,14 +17,13 @@ namespace NS.Autenticacao.API.Controllers
 {
 	[ApiController]
 	[Route("api/autenticacao")]
-	public class AuthController : Controller
+	public class AuthController : MainController
 	{
-
 		private readonly SignInManager<IdentityUser> _signInManager;
 		private readonly UserManager<IdentityUser> _userManager;
 		private readonly AppSettings _appSettings;
 
-		public AuthController(SignInManager<IdentityUser> signInManager, 
+		public AuthController(SignInManager<IdentityUser> signInManager,
 							  UserManager<IdentityUser> userManager,
 							  IOptions<AppSettings> appSettings)
 		{
@@ -47,11 +48,15 @@ namespace NS.Autenticacao.API.Controllers
 
 			if (result.Succeeded)
 			{
-				await _signInManager.SignInAsync(user, false);
-				return Ok(await GerarJwt(usuarioRegistro.Email));
+				return CustomResponse(await GerarJwt(usuarioRegistro.Email));
 			}
 
-			return BadRequest();
+			foreach (var error in result.Errors)
+			{
+				AdicionarErroProcessamento(error.Description);
+			}
+
+			return CustomResponse();
 
 		}
 
@@ -63,19 +68,34 @@ namespace NS.Autenticacao.API.Controllers
 			var result = await _signInManager.PasswordSignInAsync(usuarioLogin.Email, usuarioLogin.Senha, false, true);
 
 			if (result.Succeeded)
-			{
-				return Ok(await GerarJwt(usuarioLogin.Email));
+			{				
+				return CustomResponse(await GerarJwt(usuarioLogin.Email));
 			}
 
-			return BadRequest();
+			if (result.IsLockedOut)
+			{
+				AdicionarErroProcessamento("Usuário temporariamente bloqueado por tentativas inválidas.");
+				return CustomResponse();
+			}
 
+			AdicionarErroProcessamento("Usuário ou Senha incorretos.");
+
+			return CustomResponse();
 		}
 
 		private async Task<UsuarioRespostaLoginViewModel> GerarJwt(string email)
 		{
-
 			var user = await _userManager.FindByEmailAsync(email);
 			var claims = await _userManager.GetClaimsAsync(user);
+
+			var identityClaims = await ObterClaimsUsuarioId(claims, user);
+			var encodedToken = CodificarToken(identityClaims);
+			
+			return ObterRespostaToken(encodedToken, user, claims); 
+		}
+
+		private async Task<ClaimsIdentity> ObterClaimsUsuarioId(ICollection<Claim> claims, IdentityUser user)
+		{
 			var userRoles = await _userManager.GetRolesAsync(user);
 
 			claims.Add(new Claim(JwtRegisteredClaimNames.Sub, user.Id));
@@ -92,10 +112,16 @@ namespace NS.Autenticacao.API.Controllers
 			var identityClaims = new ClaimsIdentity();
 			identityClaims.AddClaims(claims);
 
+			return identityClaims;
+		}
+
+		private string CodificarToken(ClaimsIdentity identityClaims)
+		{
 			var tokenHandler = new JwtSecurityTokenHandler();
 			var key = Encoding.ASCII.GetBytes(_appSettings.Secret);
 
-			var token = tokenHandler.CreateToken(new SecurityTokenDescriptor { 
+			var token = tokenHandler.CreateToken(new SecurityTokenDescriptor
+			{
 				Issuer = _appSettings.Emissor,
 				Audience = _appSettings.ValidoEm,
 				Subject = identityClaims,
@@ -103,19 +129,22 @@ namespace NS.Autenticacao.API.Controllers
 				SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
 			});
 
-			var encondedToken = tokenHandler.WriteToken(token);
+			return tokenHandler.WriteToken(token);
+		}
 
-			var response = new UsuarioRespostaLoginViewModel {
-				AccessToken = encondedToken,
+		private UsuarioRespostaLoginViewModel ObterRespostaToken(string encodedToken, IdentityUser user, IEnumerable<Claim> claims)
+		{
+			return new UsuarioRespostaLoginViewModel
+			{
+				AccessToken = encodedToken,
 				ExpiresIn = TimeSpan.FromHours(_appSettings.ExpiracaoHoras).TotalSeconds,
-				UsuarioToken = new UsuarioToken { 
+				UsuarioToken = new UsuarioToken
+				{
 					Id = user.Id,
 					Email = user.Email,
-					Claims = claims.Select( c => new UsuarioClaim { Type = c.Type, Value = c.Value} )
+					Claims = claims.Select(c => new UsuarioClaim { Type = c.Type, Value = c.Value })
 				}
 			};
-
-			return response;
 		}
 
 		private static long ToUnixEpochData(DateTime date)
