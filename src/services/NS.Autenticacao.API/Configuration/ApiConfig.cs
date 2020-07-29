@@ -9,13 +9,16 @@ namespace NS.Autenticacao.API.Configuration
 	{
 		public static IServiceCollection AddApiConfiguration(this IServiceCollection services)
 		{
-			services.AddControllers();
+			services.AddControllers();			
 
 			return services;
 		}
 
 		public static IApplicationBuilder UseApiConfiguration(this IApplicationBuilder app, IWebHostEnvironment env)
 		{
+			app.UseCors(x => x.AllowAnyOrigin()
+							  .AllowAnyMethod()
+							  .AllowAnyHeader());
 
 			if (env.IsDevelopment())
 			{

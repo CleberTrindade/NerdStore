@@ -10,7 +10,7 @@ namespace NS.Autenticacao.API.Controllers
 {
 
 	[ApiController]
-	public abstract class MainController : ControllerBase
+	public abstract class MainController : Controller
 	{
 		protected ICollection<string> Erros = new List<string>();
 		protected ActionResult CustomResponse(object result = null)

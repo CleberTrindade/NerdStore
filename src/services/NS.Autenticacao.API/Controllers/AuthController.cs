@@ -35,7 +35,7 @@ namespace NS.Autenticacao.API.Controllers
 		[HttpPost("nova-conta")]
 		public async Task<ActionResult> Registrar(UsuarioRegistroViewModel usuarioRegistro)
 		{
-			if (!ModelState.IsValid) return BadRequest();
+			if (!ModelState.IsValid) return CustomResponse(ModelState);
 
 			var user = new IdentityUser
 			{
@@ -60,10 +60,10 @@ namespace NS.Autenticacao.API.Controllers
 
 		}
 
-		[HttpPost("login")]
+		[HttpPost("autenticar")]
 		public async Task<ActionResult> Login(UsuarioLoginViewModel usuarioLogin)
 		{
-			if (!ModelState.IsValid) return BadRequest();
+			if (!ModelState.IsValid) return CustomResponse(ModelState);
 
 			var result = await _signInManager.PasswordSignInAsync(usuarioLogin.Email, usuarioLogin.Senha, false, true);
 
@@ -78,8 +78,7 @@ namespace NS.Autenticacao.API.Controllers
 				return CustomResponse();
 			}
 
-			AdicionarErroProcessamento("Usuário ou Senha incorretos.");
-
+			AdicionarErroProcessamento("Usuário ou Senha incorretos.");			
 			return CustomResponse();
 		}
 
