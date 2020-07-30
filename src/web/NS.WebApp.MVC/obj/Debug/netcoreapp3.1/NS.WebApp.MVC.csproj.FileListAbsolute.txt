@@ -363,3 +363,5 @@ D:\02. Projetos\NerdStore\src\web\NS.WebApp.MVC\obj\Debug\netcoreapp3.1\NS.WebAp
 D:\02. Projetos\NerdStore\src\web\NS.WebApp.MVC\obj\Debug\netcoreapp3.1\NS.WebApp.MVC.MvcApplicationPartsAssemblyInfo.cache
 D:\02. Projetos\NerdStore\src\web\NS.WebApp.MVC\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
 D:\02. Projetos\NerdStore\src\web\NS.WebApp.MVC\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Summary\Default.cshtml.g.cs
+D:\02. Projetos\NerdStore\src\web\NS.WebApp.MVC\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.json
+D:\02. Projetos\NerdStore\src\web\NS.WebApp.MVC\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.local.json

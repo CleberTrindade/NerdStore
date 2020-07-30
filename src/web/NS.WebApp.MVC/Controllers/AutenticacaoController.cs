@@ -32,8 +32,6 @@ namespace NS.WebApp.MVC.Controllers
 		[Route("nova-conta")]
 		public async Task<IActionResult> Registro(UsuarioRegistroViewModel usuarioRegistro)
 		{
-			return new StatusCodeResult(500);
-
 			if (!ModelState.IsValid) return View(usuarioRegistro);
 
 			var resposta = await _autenticacaoService.Registro(usuarioRegistro);
