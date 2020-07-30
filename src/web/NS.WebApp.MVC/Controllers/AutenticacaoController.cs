@@ -32,6 +32,8 @@ namespace NS.WebApp.MVC.Controllers
 		[Route("nova-conta")]
 		public async Task<IActionResult> Registro(UsuarioRegistroViewModel usuarioRegistro)
 		{
+			return new StatusCodeResult(500);
+
 			if (!ModelState.IsValid) return View(usuarioRegistro);
 
 			var resposta = await _autenticacaoService.Registro(usuarioRegistro);
@@ -45,15 +47,18 @@ namespace NS.WebApp.MVC.Controllers
 
 		[HttpGet]
 		[Route("login")]
-		public IActionResult Login()
+		public IActionResult Login(string returnUrl = null)
 		{
+			ViewData["ReturnUrl"] = returnUrl;
 			return View();
 		}
 
 		[HttpPost]
 		[Route("login")]
-		public async Task<IActionResult> Login(UsuarioLoginViewModel usuarioLogin)
+		public async Task<IActionResult> Login(UsuarioLoginViewModel usuarioLogin, string returnUrl = null)
 		{
+			ViewData["ReturnUrl"] = returnUrl;
+
 			if (!ModelState.IsValid) return View(usuarioLogin);
 
 			var resposta = await _autenticacaoService.Login(usuarioLogin);
@@ -62,7 +67,9 @@ namespace NS.WebApp.MVC.Controllers
 
 			await RealizarLogin(resposta);
 
-			return RedirectToAction("Index", "Home");
+			if (string.IsNullOrEmpty(returnUrl)) return RedirectToAction("Index", "Home");
+
+			return RedirectToAction(returnUrl);
 		}
 
 		[HttpGet]

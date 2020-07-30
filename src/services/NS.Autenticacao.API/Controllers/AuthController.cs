@@ -35,6 +35,7 @@ namespace NS.Autenticacao.API.Controllers
 		[HttpPost("nova-conta")]
 		public async Task<ActionResult> Registrar(UsuarioRegistroViewModel usuarioRegistro)
 		{
+
 			if (!ModelState.IsValid) return CustomResponse(ModelState);
 
 			var user = new IdentityUser
