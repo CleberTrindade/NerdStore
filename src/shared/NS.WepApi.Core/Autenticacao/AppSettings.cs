@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace NS.Autenticacao.API.Extensions
+﻿namespace NS.WepApi.Core.Autenticacao
 {
 	public class AppSettings
 	{

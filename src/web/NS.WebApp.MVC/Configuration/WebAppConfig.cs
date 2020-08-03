@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using NS.WebApp.MVC.Extensions;
+using System.Globalization;
 
 namespace NS.WebApp.MVC.Configuration
 {
@@ -20,10 +22,10 @@ namespace NS.WebApp.MVC.Configuration
 		{
 			if (env.IsDevelopment())
 			{
-				//app.UseDeveloperExceptionPage();
-				app.UseExceptionHandler("/erro/500");
-				app.UseStatusCodePagesWithRedirects("/erro/{0}");
-				app.UseHsts();
+				app.UseDeveloperExceptionPage();
+				//app.UseExceptionHandler("/erro/500");
+				//app.UseStatusCodePagesWithRedirects("/erro/{0}");
+				//app.UseHsts();
 			}
 			else
 			{
@@ -41,13 +43,21 @@ namespace NS.WebApp.MVC.Configuration
 
 			app.UseIdentityConfiguration();
 
+			var supportedCultures = new[] { new CultureInfo("pt-br") };
+			app.UseRequestLocalization(new RequestLocalizationOptions
+			{
+				DefaultRequestCulture = new RequestCulture("pt-br"),
+				SupportedCultures = supportedCultures,
+				SupportedUICultures = supportedCultures
+			});
+
 			app.UseMiddleware<ExceptionMiddleware>();
 
 			app.UseEndpoints(endpoints =>
 			{
 				endpoints.MapControllerRoute(
 					name: "default",
-					pattern: "{controller=Home}/{action=Index}/{id?}");
+					pattern: "{controller=Catalogo}/{action=Index}/{id?}");
 			});
 		}
 	}

@@ -32,7 +32,7 @@ namespace NS.WebApp.MVC
 
 			services.AddMvcConfiguration(Configuration);
 
-			services.DependencyInjectResolve();
+			services.DependencyInjectResolve(Configuration);
 		}
 
 		public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

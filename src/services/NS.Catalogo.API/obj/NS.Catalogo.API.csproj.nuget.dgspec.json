@@ -32,6 +32,9 @@
             "projectReferences": {
               "D:\\02. Projetos\\NerdStore\\src\\shared\\NS.Core\\NS.Core.csproj": {
                 "projectPath": "D:\\02. Projetos\\NerdStore\\src\\shared\\NS.Core\\NS.Core.csproj"
+              },
+              "D:\\02. Projetos\\NerdStore\\src\\shared\\NS.WepApi.Core\\NS.WepApi.Core.csproj": {
+                "projectPath": "D:\\02. Projetos\\NerdStore\\src\\shared\\NS.WepApi.Core\\NS.WepApi.Core.csproj"
               }
             }
           }
@@ -143,6 +146,70 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\02. Projetos\\NerdStore\\src\\shared\\NS.WepApi.Core\\NS.WepApi.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\02. Projetos\\NerdStore\\src\\shared\\NS.WepApi.Core\\NS.WepApi.Core.csproj",
+        "projectName": "NS.WepApi.Core",
+        "projectPath": "D:\\02. Projetos\\NerdStore\\src\\shared\\NS.WepApi.Core\\NS.WepApi.Core.csproj",
+        "packagesPath": "C:\\Users\\Cleber\\.nuget\\packages\\",
+        "outputPath": "D:\\02. Projetos\\NerdStore\\src\\shared\\NS.WepApi.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Cleber\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

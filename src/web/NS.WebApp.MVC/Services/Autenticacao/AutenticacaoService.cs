@@ -1,5 +1,4 @@
-﻿using Microsoft.CodeAnalysis;
-using Microsoft.Extensions.Options;
+﻿using Microsoft.Extensions.Options;
 using NS.WebApp.MVC.Extensions;
 using NS.WebApp.MVC.Models;
 using NS.WebApp.MVC.Models.Usuario;

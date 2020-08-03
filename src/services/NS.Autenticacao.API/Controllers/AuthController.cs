@@ -2,10 +2,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using NS.Autenticacao.API.Extensions;
 using NS.Autenticacao.API.Models.Usuario;
+using NS.WepApi.Core.Autenticacao;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;

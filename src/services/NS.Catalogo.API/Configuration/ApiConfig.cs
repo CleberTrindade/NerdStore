@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using NS.Catalogo.API.Data;
+using NS.WepApi.Core.Autenticacao;
 
 namespace NS.Catalogo.API.Configuration
 {
@@ -39,6 +40,8 @@ namespace NS.Catalogo.API.Configuration
 			app.UseRouting();
 
 			app.UseCors("Total");
+
+			app.UseAuthConfiguration();
 
 			app.UseEndpoints(endpoints =>
 			{

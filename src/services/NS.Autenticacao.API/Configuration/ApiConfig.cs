@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using NS.WepApi.Core.Autenticacao;
 
 namespace NS.Autenticacao.API.Configuration
 {
@@ -29,7 +30,7 @@ namespace NS.Autenticacao.API.Configuration
 
 			app.UseRouting();
 
-			app.UseIdentityConfiguration();
+			app.UseAuthConfiguration();
 
 			app.UseEndpoints(endpoints =>
 			{

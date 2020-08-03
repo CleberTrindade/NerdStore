@@ -61,3 +61,13 @@ D:\02. Projetos\NerdStore\src\services\NS.Catalogo.API\bin\Debug\netcoreapp3.1\S
 D:\02. Projetos\NerdStore\src\services\NS.Catalogo.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\02. Projetos\NerdStore\src\services\NS.Catalogo.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
 D:\02. Projetos\NerdStore\src\services\NS.Catalogo.API\obj\Debug\netcoreapp3.1\NS.Catalogo.API.MvcApplicationPartsAssemblyInfo.cs
+D:\02. Projetos\NerdStore\src\services\NS.Catalogo.API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\02. Projetos\NerdStore\src\services\NS.Catalogo.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\02. Projetos\NerdStore\src\services\NS.Catalogo.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+D:\02. Projetos\NerdStore\src\services\NS.Catalogo.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+D:\02. Projetos\NerdStore\src\services\NS.Catalogo.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\02. Projetos\NerdStore\src\services\NS.Catalogo.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+D:\02. Projetos\NerdStore\src\services\NS.Catalogo.API\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\02. Projetos\NerdStore\src\services\NS.Catalogo.API\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+D:\02. Projetos\NerdStore\src\services\NS.Catalogo.API\bin\Debug\netcoreapp3.1\NS.WepApi.Core.dll
+D:\02. Projetos\NerdStore\src\services\NS.Catalogo.API\bin\Debug\netcoreapp3.1\NS.WepApi.Core.pdb
