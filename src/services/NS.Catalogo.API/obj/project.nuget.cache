@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "4Er+Z4hLzwRWX2AsJCFsp/0SdVEVjzJdIJhcKPzol3ZvyMLwvxAMUHws9Ba7iI6gyk2bllvENtfvE+UsW/L9mg==",
+  "dgSpecHash": "z7WiblWLyFMwjkhyry/+RCfv+E0O/aQd3YWO/xGwR8q+0pL7c3dk3QVwS/fDnUFHBUEwMxauEEa/8aqreVaC+g==",
   "success": true,
   "projectFilePath": "D:\\02. Projetos\\NerdStore\\src\\services\\NS.Catalogo.API\\NS.Catalogo.API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Cleber\\.nuget\\packages\\fluentvalidation\\9.0.1\\fluentvalidation.9.0.1.nupkg.sha512",
+    "C:\\Users\\Cleber\\.nuget\\packages\\mediatr\\8.1.0\\mediatr.8.1.0.nupkg.sha512",
     "C:\\Users\\Cleber\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.6\\microsoft.aspnetcore.authentication.jwtbearer.3.1.6.nupkg.sha512",
     "C:\\Users\\Cleber\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Cleber\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

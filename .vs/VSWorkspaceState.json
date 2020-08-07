@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src\\services\\NS.Autenticacao.API"
+    "\\src\\services",
+    "\\src\\services\\NS.Catalogo.API"
   ],
+  "SelectedNode": "\\.gitignore",
   "PreviewInSolutionExplorer": false
 }

@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "U2cuJlfSDnjofQTB7dpyBJmEjsHNG3szHWCiYOhfxKeFmk6sveAObr1T9ywpBhKV6Ptgwj5RAShmVsE96os1vw==",
+  "dgSpecHash": "300egjga8nqPi5LECZpR4lOx8KVmkTDr3HTtC0h4evdkH/S/ckRLDzIu/uLFy2GYByHdbdtmxRMW6so6ApLn9g==",
   "success": true,
   "projectFilePath": "D:\\02. Projetos\\NerdStore\\src\\shared\\NS.Core\\NS.Core.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Cleber\\.nuget\\packages\\fluentvalidation\\9.0.1\\fluentvalidation.9.0.1.nupkg.sha512",
+    "C:\\Users\\Cleber\\.nuget\\packages\\mediatr\\8.1.0\\mediatr.8.1.0.nupkg.sha512"
+  ],
   "logs": []
 }

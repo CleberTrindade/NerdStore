@@ -37,7 +37,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NS.Carrinho.API", "src\serv
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NS.Catalogo.API", "src\services\NS.Catalogo.API\NS.Catalogo.API.csproj", "{73D7AC8B-F829-44D4-8A13-E96337C5D963}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NS.Cliente.API", "src\services\NS.Cliente.API\NS.Cliente.API.csproj", "{D2C49078-595E-40A0-A119-61B0DD97C5AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NS.Clientes.API", "src\services\NS.Cliente.API\NS.Clientes.API.csproj", "{D2C49078-595E-40A0-A119-61B0DD97C5AD}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NS.Pagamento.API", "src\services\NS.Pagamento.API\NS.Pagamento.API.csproj", "{D28D0157-EEA2-4B2F-A602-8008FE3B16F6}"
 EndProject
@@ -45,7 +45,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NS.Pedido.API", "src\servic
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{4B0B486C-6B49-43BE-928C-44BF4F1DECEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NS.WepApi.Core", "src\shared\NS.WepApi.Core\NS.WepApi.Core.csproj", "{2836A92B-F473-4996-83DA-D862C1A83E2E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NS.WepApi.Core", "src\shared\NS.WepApi.Core\NS.WepApi.Core.csproj", "{2836A92B-F473-4996-83DA-D862C1A83E2E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

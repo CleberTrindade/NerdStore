@@ -4,6 +4,6 @@ D:\02. Projetos\NerdStore\src\shared\NS.Core\bin\Debug\netcoreapp3.1\NS.Core.pdb
 D:\02. Projetos\NerdStore\src\shared\NS.Core\obj\Debug\netcoreapp3.1\NS.Core.csprojAssemblyReference.cache
 D:\02. Projetos\NerdStore\src\shared\NS.Core\obj\Debug\netcoreapp3.1\NS.Core.AssemblyInfoInputs.cache
 D:\02. Projetos\NerdStore\src\shared\NS.Core\obj\Debug\netcoreapp3.1\NS.Core.AssemblyInfo.cs
-D:\02. Projetos\NerdStore\src\shared\NS.Core\obj\Debug\netcoreapp3.1\NS.Core.csproj.CoreCompileInputs.cache
 D:\02. Projetos\NerdStore\src\shared\NS.Core\obj\Debug\netcoreapp3.1\NS.Core.dll
 D:\02. Projetos\NerdStore\src\shared\NS.Core\obj\Debug\netcoreapp3.1\NS.Core.pdb
+D:\02. Projetos\NerdStore\src\shared\NS.Core\obj\Debug\netcoreapp3.1\NS.Core.csproj.CoreCompileInputs.cache
