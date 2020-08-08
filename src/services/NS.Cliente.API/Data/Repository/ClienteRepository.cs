@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using NS.Clientes.API.Data;
-using NS.Clientes.API.Data.Repository;
 using NS.Clientes.API.Models;
 using NS.Core.Data;
 using System;
@@ -24,24 +23,24 @@ namespace NS.Catalogo.API.Data.Repository
 		{
 			return await _context.Clientes.AsNoTracking().ToListAsync();
 		}
-		public async Task<Cliente> ObterPorId(Guid id)
+		public async Task<Cliente> ObterPorCpf(string cpf)
 		{
-			return await _context.Clientes.FindAsync(id);
+			return await _context.Clientes.FirstOrDefaultAsync(c => c.Cpf.Numero == cpf);
 		}
 		
-		public async void Adicionar(Cliente produto)
+		public void Adicionar(Cliente cliente)
 		{
-			_context.Clientes.Add(produto);
+			_context.Clientes.Add(cliente);
 		}
 
-		public async void Atualizar(Cliente produto)
+		public void Atualizar(Cliente cliente)
 		{
-			_context.Clientes.Update(produto);
+			_context.Clientes.Update(cliente);
 		}
 
 		public void Dispose()
 		{
-			_context?.Dispose();
+			_context.Dispose();
 		}
 	}
 }

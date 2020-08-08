@@ -1,7 +1,11 @@
 ﻿using FluentValidation.Results;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
+using NS.Catalogo.API.Data.Repository;
 using NS.Clientes.API.Application.Commands;
+using NS.Clientes.API.Application.Events;
+using NS.Clientes.API.Data;
+using NS.Clientes.API.Models;
 using NS.Core.Mediator;
 
 namespace NS.Clientes.API.Configuration
@@ -12,6 +16,11 @@ namespace NS.Clientes.API.Configuration
 		{
 			services.AddScoped<IMediatorHandler, MediatorHandler>();
 			services.AddScoped<IRequestHandler<RegistrarClienteCommand, ValidationResult>, ClienteCommandHandler>();
+
+			services.AddScoped<INotificationHandler<ClienteRegistradoEvent>, ClienteEventHandler>();
+
+			services.AddScoped<IClienteRepository, ClienteRepository>();
+			services.AddScoped<ClientesContext>();
 		}
 	}
 }
