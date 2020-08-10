@@ -2,15 +2,16 @@
 using Microsoft.AspNetCore.Mvc;
 using NS.Catalogo.API.Models;
 using NS.WepApi.Core.Autenticacao;
+using NS.WepApi.Core.Controllers;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace NS.Catalogo.API.Controllers
 {
-	[ApiController]
+
 	[Authorize]
-	public class CatalogoController : Controller
+	public class CatalogoController : MainController
 	{
 		private readonly IProdutoRepository _produtoRepository;
 		public CatalogoController(IProdutoRepository produtoRepository)

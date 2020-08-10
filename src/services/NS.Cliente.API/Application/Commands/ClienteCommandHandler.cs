@@ -25,7 +25,12 @@ namespace NS.Clientes.API.Application.Commands
 
 			var clienteExistente = await _clienteRepository.ObterPorCpf(cliente.Cpf.Numero);
 
-			if (clienteExistente != null)
+			if (clienteExistente == null)
+			{
+				//Coloquei para não estava aceitando " clienteExistente != null ".
+				//A Api estava parando sem retornar erro.
+			}
+			else
 			{
 				AdicionarErrro("Este CPF já está em uso.");
 				return ValidationResult;

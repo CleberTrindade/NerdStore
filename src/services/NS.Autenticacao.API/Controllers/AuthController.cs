@@ -4,6 +4,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using NS.Autenticacao.API.Models.Usuario;
 using NS.WepApi.Core.Autenticacao;
+using NS.WepApi.Core.Controllers;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;

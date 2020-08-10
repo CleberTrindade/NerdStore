@@ -1,6 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using FluentValidation.Results;
+using Microsoft.EntityFrameworkCore;
 using NS.Catalogo.API.Models;
 using NS.Core.Data;
+using NS.Core.Messages;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -13,6 +15,9 @@ namespace NS.Catalogo.API.Data
 		public DbSet<Produto> Produtos { get; set; }
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder) {
+
+			modelBuilder.Ignore<ValidationResult>();
+			modelBuilder.Ignore<Event>();
 
 			foreach (var property in modelBuilder.Model.GetEntityTypes().SelectMany(
 				e => e.GetProperties().Where(p => p.ClrType == typeof(string))))

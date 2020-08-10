@@ -29,11 +29,11 @@ namespace NS.Clientes.API
 
 		public void ConfigureServices(IServiceCollection services)
 		{
-			services.AddApiConiguration(Configuration);
+			services.AddApiConfiguration(Configuration);
 
 			services.AddJwtConfiguration(Configuration);
 
-			services.AddSwaggerConiguration();
+			services.AddSwaggerConfiguration();
 
 			services.AddMediatR(typeof(Startup));
 

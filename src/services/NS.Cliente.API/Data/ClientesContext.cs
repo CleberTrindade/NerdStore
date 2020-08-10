@@ -1,10 +1,12 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
+using FluentValidation.Results;
 using Microsoft.EntityFrameworkCore;
 using NS.Clientes.API.Models;
 using NS.Core.Data;
 using NS.Core.DomainObjects;
 using NS.Core.Mediator;
+using NS.Core.Messages;
 
 namespace NS.Clientes.API.Data
 {
@@ -23,6 +25,8 @@ namespace NS.Clientes.API.Data
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
+			modelBuilder.Ignore<ValidationResult>();
+			modelBuilder.Ignore<Event>();
 
 			foreach (var property in modelBuilder.Model.GetEntityTypes().SelectMany(
 				e => e.GetProperties().Where(p => p.ClrType == typeof(string))))

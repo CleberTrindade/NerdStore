@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc.DataAnnotations;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using NS.WebApp.MVC.Extensions;
@@ -15,6 +16,8 @@ namespace NS.WebApp.MVC.Configuration
 	{
 		public static void DependencyInjectResolve(this IServiceCollection services, IConfiguration configuration)
 		{
+			services.AddSingleton<IValidationAttributeAdapterProvider, CpfValidationAttributeAdapterProvider>();
+
 			services.AddTransient<HttpClientAuthorizationDelegatingHandler>();
 
 			services.AddHttpClient<IAutenticacaoService, AutenticacaoService>();
@@ -22,7 +25,7 @@ namespace NS.WebApp.MVC.Configuration
 			services.AddHttpClient<ICatalogoService, CatalogoService>()
 				.AddHttpMessageHandler<HttpClientAuthorizationDelegatingHandler>()
 				.AddTransientHttpErrorPolicy(
-					p => p.WaitAndRetryAsync(3, _ => TimeSpan.FromMilliseconds(600))
+					p => p.WaitAndRetryAsync(5, _ => TimeSpan.FromMilliseconds(600))
 				);
 
 			//services.AddHttpClient("Refit", options =>

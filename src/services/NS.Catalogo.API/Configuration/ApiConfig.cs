@@ -11,7 +11,7 @@ namespace NS.Catalogo.API.Configuration
 {
 	public static class ApiConfig
 	{
-		public static void AddApiConiguration(this IServiceCollection services, IConfiguration configuration)
+		public static void AddApiConfiguration(this IServiceCollection services, IConfiguration configuration)
 		{
 			services.AddDbContext<CatalogoContext>(options =>
 				options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));

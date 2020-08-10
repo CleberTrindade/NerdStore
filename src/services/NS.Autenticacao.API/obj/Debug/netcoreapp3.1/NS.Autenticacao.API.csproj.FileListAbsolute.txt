@@ -78,3 +78,6 @@ D:\02. Projetos\NerdStore\src\services\NS.Autenticacao.API\obj\Debug\netcoreapp3
 D:\02. Projetos\NerdStore\src\services\NS.Autenticacao.API\obj\Debug\netcoreapp3.1\NS.Autenticacao.API.genruntimeconfig.cache
 D:\02. Projetos\NerdStore\src\services\NS.Autenticacao.API\bin\Debug\netcoreapp3.1\NS.WepApi.Core.dll
 D:\02. Projetos\NerdStore\src\services\NS.Autenticacao.API\bin\Debug\netcoreapp3.1\NS.WepApi.Core.pdb
+D:\02. Projetos\NerdStore\src\services\NS.Autenticacao.API\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.json
+D:\02. Projetos\NerdStore\src\services\NS.Autenticacao.API\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.local.json
+D:\02. Projetos\NerdStore\src\services\NS.Autenticacao.API\bin\Debug\netcoreapp3.1\FluentValidation.dll

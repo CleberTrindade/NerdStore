@@ -7,13 +7,13 @@ namespace NS.Clientes.API.Configuration
 {
 	public static class SwaggerConfig
 	{
-		public static void AddSwaggerConiguration(this IServiceCollection services)
+		public static void AddSwaggerConfiguration(this IServiceCollection services)
 		{
 			services.AddSwaggerGen(c =>
 			{
 				c.SwaggerDoc("v1", new OpenApiInfo()
 				{
-					Title = "NerdStore Catálogo API",
+					Title = "NerdStore Clientes API",
 					Description = "Esta API faz parte do Sistema Distribuido NerdStore.",
 					Contact = new OpenApiContact() { Name = "Cleber Trindade", Email = "cleber.trindade.net@gmail.com" },
 					License = new OpenApiLicense() { Name = "MIT", Url = new Uri("https://opensource.org/licenses/MIT") }

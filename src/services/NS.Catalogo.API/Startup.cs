@@ -27,11 +27,11 @@ namespace NS.Catalogo.API
 
 		public void ConfigureServices(IServiceCollection services)
 		{
-			services.AddApiConiguration(Configuration);
+			services.AddApiConfiguration(Configuration);
 
 			services.AddJwtConfiguration(Configuration);
 
-			services.AddSwaggerConiguration();
+			services.AddSwaggerConfiguration();
 
 			services.RegisterServices();
 		}

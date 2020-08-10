@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "q+7xJF5vK6FKVRBm0KdFJoeO1nX/WgBw+s55DgqLky2suzbRgBkONo1jbXOOqTPHf8m/3BuHYz2uVXR9hG0KXw==",
+  "dgSpecHash": "2KUb+mZAqUWRKlzZEao+raFwqbopqbofHV9UPWWvmyb+tFJSuoPD86Yz+vge7NqUA8WteofQkpJxg6NnjG5HKg==",
   "success": true,
   "projectFilePath": "D:\\02. Projetos\\NerdStore\\src\\services\\NS.Autenticacao.API\\NS.Autenticacao.API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Cleber\\.nuget\\packages\\fluentvalidation\\9.0.1\\fluentvalidation.9.0.1.nupkg.sha512",
     "C:\\Users\\Cleber\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.6\\microsoft.aspnetcore.authentication.jwtbearer.3.1.6.nupkg.sha512",
     "C:\\Users\\Cleber\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.6\\microsoft.aspnetcore.cryptography.internal.3.1.6.nupkg.sha512",
     "C:\\Users\\Cleber\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.6\\microsoft.aspnetcore.cryptography.keyderivation.3.1.6.nupkg.sha512",

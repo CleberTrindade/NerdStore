@@ -1,14 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using FluentValidation.Results;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
-using Microsoft.EntityFrameworkCore.Internal;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace NS.Autenticacao.API.Controllers
+namespace NS.WepApi.Core.Controllers
 {
-
 	[ApiController]
 	public abstract class MainController : Controller
 	{
@@ -37,16 +34,27 @@ namespace NS.Autenticacao.API.Controllers
 			return CustomResponse();
 		}
 
+		protected ActionResult CustomResponse(ValidationResult validationResult)
+		{
+			foreach (var erro in validationResult.Errors)
+			{
+				AdicionarErroProcessamento(erro.ErrorMessage);
+			}
+			return CustomResponse();
+		}
+
 
 		protected bool OperacaoValida()
 		{
 			return !Erros.Any();
 		}
 
-		protected void AdicionarErroProcessamento(string erro) {
+		protected void AdicionarErroProcessamento(string erro)
+		{
 			Erros.Add(erro);
 		}
-		protected void LimparErrosProcessamento() {
+		protected void LimparErrosProcessamento()
+		{
 			Erros.Clear();
 		}
 	}

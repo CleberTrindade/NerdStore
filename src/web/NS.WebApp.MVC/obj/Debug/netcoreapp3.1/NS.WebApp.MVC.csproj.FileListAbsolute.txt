@@ -372,3 +372,7 @@ D:\02. Projetos\NerdStore\src\web\NS.WebApp.MVC\bin\Debug\netcoreapp3.1\Polly.Ex
 D:\02. Projetos\NerdStore\src\web\NS.WebApp.MVC\obj\Debug\netcoreapp3.1\NS.WebApp.MVC.csproj.CoreCompileInputs.cache
 D:\02. Projetos\NerdStore\src\web\NS.WebApp.MVC\obj\Debug\netcoreapp3.1\NS.WebApp.MVC.MvcApplicationPartsAssemblyInfo.cs
 D:\02. Projetos\NerdStore\src\web\NS.WebApp.MVC\obj\Debug\netcoreapp3.1\NS.WebApp.MVC.MvcApplicationPartsAssemblyInfo.cache
+D:\02. Projetos\NerdStore\src\web\NS.WebApp.MVC\bin\Debug\netcoreapp3.1\FluentValidation.dll
+D:\02. Projetos\NerdStore\src\web\NS.WebApp.MVC\bin\Debug\netcoreapp3.1\MediatR.dll
+D:\02. Projetos\NerdStore\src\web\NS.WebApp.MVC\bin\Debug\netcoreapp3.1\NS.Core.dll
+D:\02. Projetos\NerdStore\src\web\NS.WebApp.MVC\bin\Debug\netcoreapp3.1\NS.Core.pdb

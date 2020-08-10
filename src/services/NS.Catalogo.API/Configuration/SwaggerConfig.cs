@@ -7,7 +7,7 @@ namespace NS.Catalogo.API.Configuration
 {
 	public static class SwaggerConfig
 	{
-		public static void AddSwaggerConiguration(this IServiceCollection services)
+		public static void AddSwaggerConfiguration(this IServiceCollection services)
 		{
 			services.AddSwaggerGen(c =>
 			{
