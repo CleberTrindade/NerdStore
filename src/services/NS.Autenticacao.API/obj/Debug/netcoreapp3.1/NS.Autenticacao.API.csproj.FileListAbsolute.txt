@@ -66,9 +66,6 @@ D:\02. Projetos\NerdStore\src\services\NS.Autenticacao.API\bin\Debug\netcoreapp3
 D:\02. Projetos\NerdStore\src\services\NS.Autenticacao.API\obj\Debug\netcoreapp3.1\NS.Autenticacao.API.csprojAssemblyReference.cache
 D:\02. Projetos\NerdStore\src\services\NS.Autenticacao.API\obj\Debug\netcoreapp3.1\NS.Autenticacao.API.AssemblyInfoInputs.cache
 D:\02. Projetos\NerdStore\src\services\NS.Autenticacao.API\obj\Debug\netcoreapp3.1\NS.Autenticacao.API.AssemblyInfo.cs
-D:\02. Projetos\NerdStore\src\services\NS.Autenticacao.API\obj\Debug\netcoreapp3.1\NS.Autenticacao.API.csproj.CoreCompileInputs.cache
-D:\02. Projetos\NerdStore\src\services\NS.Autenticacao.API\obj\Debug\netcoreapp3.1\NS.Autenticacao.API.MvcApplicationPartsAssemblyInfo.cs
-D:\02. Projetos\NerdStore\src\services\NS.Autenticacao.API\obj\Debug\netcoreapp3.1\NS.Autenticacao.API.MvcApplicationPartsAssemblyInfo.cache
 D:\02. Projetos\NerdStore\src\services\NS.Autenticacao.API\obj\Debug\netcoreapp3.1\NS.Autenticacao.API.RazorTargetAssemblyInfo.cache
 D:\02. Projetos\NerdStore\src\services\NS.Autenticacao.API\obj\Debug\netcoreapp3.1\NS.Autenticacao.API.csproj.CopyComplete
 D:\02. Projetos\NerdStore\src\services\NS.Autenticacao.API\obj\Debug\netcoreapp3.1\staticwebassets\NS.Autenticacao.API.StaticWebAssets.Manifest.cache
@@ -81,3 +78,12 @@ D:\02. Projetos\NerdStore\src\services\NS.Autenticacao.API\bin\Debug\netcoreapp3
 D:\02. Projetos\NerdStore\src\services\NS.Autenticacao.API\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.json
 D:\02. Projetos\NerdStore\src\services\NS.Autenticacao.API\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.local.json
 D:\02. Projetos\NerdStore\src\services\NS.Autenticacao.API\bin\Debug\netcoreapp3.1\FluentValidation.dll
+D:\02. Projetos\NerdStore\src\services\NS.Autenticacao.API\bin\Debug\netcoreapp3.1\MediatR.dll
+D:\02. Projetos\NerdStore\src\services\NS.Autenticacao.API\bin\Debug\netcoreapp3.1\NS.Core.dll
+D:\02. Projetos\NerdStore\src\services\NS.Autenticacao.API\bin\Debug\netcoreapp3.1\NS.Core.pdb
+D:\02. Projetos\NerdStore\src\services\NS.Autenticacao.API\bin\Debug\netcoreapp3.1\EasyNetQ.dll
+D:\02. Projetos\NerdStore\src\services\NS.Autenticacao.API\bin\Debug\netcoreapp3.1\RabbitMQ.Client.dll
+D:\02. Projetos\NerdStore\src\services\NS.Autenticacao.API\bin\Debug\netcoreapp3.1\System.Threading.Channels.dll
+D:\02. Projetos\NerdStore\src\services\NS.Autenticacao.API\obj\Debug\netcoreapp3.1\NS.Autenticacao.API.csproj.CoreCompileInputs.cache
+D:\02. Projetos\NerdStore\src\services\NS.Autenticacao.API\obj\Debug\netcoreapp3.1\NS.Autenticacao.API.MvcApplicationPartsAssemblyInfo.cs
+D:\02. Projetos\NerdStore\src\services\NS.Autenticacao.API\obj\Debug\netcoreapp3.1\NS.Autenticacao.API.MvcApplicationPartsAssemblyInfo.cache

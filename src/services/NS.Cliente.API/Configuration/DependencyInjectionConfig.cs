@@ -6,6 +6,7 @@ using NS.Clientes.API.Application.Commands;
 using NS.Clientes.API.Application.Events;
 using NS.Clientes.API.Data;
 using NS.Clientes.API.Models;
+using NS.Clientes.API.Services;
 using NS.Core.Mediator;
 
 namespace NS.Clientes.API.Configuration
@@ -21,6 +22,8 @@ namespace NS.Clientes.API.Configuration
 
 			services.AddScoped<IClienteRepository, ClienteRepository>();
 			services.AddScoped<ClientesContext>();
+
+			services.AddHostedService<RegistroClienteIntegrationHandler>();
 		}
 	}
 }
