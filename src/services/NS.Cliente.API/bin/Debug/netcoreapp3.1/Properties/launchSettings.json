@@ -2,6 +2,10 @@
   "iisSettings": {
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
+    "iis": {
+      "applicationUrl": "http://localhost/NS.Clientes.API",
+      "sslPort": 0
+    },
     "iisExpress": {
       "applicationUrl": "http://localhost:58695",
       "sslPort": 44334
@@ -19,7 +23,7 @@
       "sqlDebugging": true,
       "nativeDebugging": true
     },
-    "NS.Cliente.API": {
+    "Selfhosting - Development": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "weatherforecast",

@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "300egjga8nqPi5LECZpR4lOx8KVmkTDr3HTtC0h4evdkH/S/ckRLDzIu/uLFy2GYByHdbdtmxRMW6so6ApLn9g==",
+  "dgSpecHash": "VS+lqz43Eb6BKFYVP5TpvIU2yAh6021U1iKNu58p6zrUga3FRUNewcYD82EpLJrNV+kssCjW4okU6qeRCBwROw==",
   "success": true,
   "projectFilePath": "D:\\02. Projetos\\NerdStore\\src\\shared\\NS.Core\\NS.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Cleber\\.nuget\\packages\\fluentvalidation\\9.0.1\\fluentvalidation.9.0.1.nupkg.sha512",
-    "C:\\Users\\Cleber\\.nuget\\packages\\mediatr\\8.1.0\\mediatr.8.1.0.nupkg.sha512"
+    "C:\\Users\\Cleber\\.nuget\\packages\\mediatr\\8.1.0\\mediatr.8.1.0.nupkg.sha512",
+    "C:\\Users\\Cleber\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.7\\microsoft.extensions.configuration.abstractions.3.1.7.nupkg.sha512",
+    "C:\\Users\\Cleber\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.7\\microsoft.extensions.primitives.3.1.7.nupkg.sha512"
   ],
   "logs": []
 }

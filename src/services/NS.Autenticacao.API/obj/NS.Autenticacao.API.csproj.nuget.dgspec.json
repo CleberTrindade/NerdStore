@@ -33,6 +33,9 @@
               "D:\\02. Projetos\\NerdStore\\src\\shared\\NS.Core\\NS.Core.csproj": {
                 "projectPath": "D:\\02. Projetos\\NerdStore\\src\\shared\\NS.Core\\NS.Core.csproj"
               },
+              "D:\\02. Projetos\\NerdStore\\src\\shared\\NS.MessageBus\\NS.MessageBus.csproj": {
+                "projectPath": "D:\\02. Projetos\\NerdStore\\src\\shared\\NS.MessageBus\\NS.MessageBus.csproj"
+              },
               "D:\\02. Projetos\\NerdStore\\src\\shared\\NS.WepApi.Core\\NS.WepApi.Core.csproj": {
                 "projectPath": "D:\\02. Projetos\\NerdStore\\src\\shared\\NS.WepApi.Core\\NS.WepApi.Core.csproj"
               }
@@ -48,10 +51,6 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
-            "EasyNetQ": {
-              "target": "Package",
-              "version": "[5.2.0, )"
-            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[3.1.6, )"
@@ -158,9 +157,86 @@
               "target": "Package",
               "version": "[9.0.1, )"
             },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
             "mediatr": {
               "target": "Package",
               "version": "[8.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\02. Projetos\\NerdStore\\src\\shared\\NS.MessageBus\\NS.MessageBus.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\02. Projetos\\NerdStore\\src\\shared\\NS.MessageBus\\NS.MessageBus.csproj",
+        "projectName": "NS.MessageBus",
+        "projectPath": "D:\\02. Projetos\\NerdStore\\src\\shared\\NS.MessageBus\\NS.MessageBus.csproj",
+        "packagesPath": "C:\\Users\\Cleber\\.nuget\\packages\\",
+        "outputPath": "D:\\02. Projetos\\NerdStore\\src\\shared\\NS.MessageBus\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Cleber\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "D:\\02. Projetos\\NerdStore\\src\\shared\\NS.Core\\NS.Core.csproj": {
+                "projectPath": "D:\\02. Projetos\\NerdStore\\src\\shared\\NS.Core\\NS.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "EasyNetQ": {
+              "target": "Package",
+              "version": "[5.2.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
+            "Polly": {
+              "target": "Package",
+              "version": "[7.2.1, )"
             }
           },
           "imports": [
@@ -226,6 +302,10 @@
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[3.1.6, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.7, )"
             }
           },
           "imports": [

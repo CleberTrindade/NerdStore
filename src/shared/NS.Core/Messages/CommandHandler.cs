@@ -20,7 +20,7 @@ namespace NS.Core.Messages
 
 		protected async Task<ValidationResult> PersistirDados(IUnitOfWork uow)
 		{
-			if (await uow.Commit()) AdicionarErrro("Houve um erro ao persistir os dados.");
+			if (!await uow.Commit()) AdicionarErrro("Houve um erro ao persistir os dados.");
 
 			return ValidationResult;
 		}
