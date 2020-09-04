@@ -1,4 +1,5 @@
-﻿using NS.Core.Messages.Integration;
+﻿using EasyNetQ;
+using NS.Core.Messages.Integration;
 using System;
 using System.Threading.Tasks;
 
@@ -6,6 +7,8 @@ namespace NS.MessageBus
 {
 	public interface IMessageBus : IDisposable
 	{
+		bool IsConnected { get; }
+		IAdvancedBus AdvancedBus { get; }
 		void Publish<T>(T message) where T : IntegrationEvent;
 
 		Task PublishAsync<T>(T message) where T : IntegrationEvent;
@@ -30,6 +33,6 @@ namespace NS.MessageBus
 			where TRequest : IntegrationEvent
 			where TResponse : ResponseMessage;
 
-		bool IsConnected { get; }
+		
 	}
 }

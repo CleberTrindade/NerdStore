@@ -10,37 +10,40 @@ namespace NS.MessageBus
 	public class MessageBus : IMessageBus
 	{
 		private IBus _bus;
+		private IAdvancedBus _advancedBus;
+
 		private readonly string _connectionString;
 
 		public MessageBus(string connectionString)
 		{
 			_connectionString = connectionString;
-			tryConnect();
+			TryConnect();
 		}
 
 		public bool IsConnected => _bus?.IsConnected ?? false;
+		public IAdvancedBus AdvancedBus => _bus?.Advanced;
 
 		public void Publish<T>(T message) where T : IntegrationEvent
 		{
-			tryConnect();
+			TryConnect();
 			_bus.Publish(message);
 		}
 
 		public async Task PublishAsync<T>(T message) where T : IntegrationEvent
 		{
-			tryConnect();
+			TryConnect();
 			await _bus.PublishAsync(message);
 		}
 
 		public void Subscribe<T>(string subscriptionId, Action<T> onMessage) where T : class
 		{
-			tryConnect();
+			TryConnect();
 			_bus.Subscribe(subscriptionId, onMessage);
 		}
 
 		public void SubscribeAsync<T>(string subscriptionId, Func<T, Task> onMessage) where T : class
 		{
-			tryConnect();
+			TryConnect();
 			_bus.SubscribeAsync(subscriptionId, onMessage);
 		}
 
@@ -48,7 +51,7 @@ namespace NS.MessageBus
 			where TRequest : IntegrationEvent
 			where TResponse : ResponseMessage
 		{
-			tryConnect();
+			TryConnect();
 			return _bus.Request<TRequest, TResponse>(request);
 		}
 
@@ -56,7 +59,7 @@ namespace NS.MessageBus
 			where TRequest : IntegrationEvent
 			where TResponse : ResponseMessage
 		{
-			tryConnect();
+			TryConnect();
 			return await _bus.RequestAsync<TRequest, TResponse>(request);
 		}
 
@@ -64,7 +67,7 @@ namespace NS.MessageBus
 			where TRequest : IntegrationEvent
 			where TResponse : ResponseMessage
 		{
-			tryConnect();
+			TryConnect();
 			return _bus.Respond(responder);
 		}
 
@@ -72,11 +75,11 @@ namespace NS.MessageBus
 			where TRequest : IntegrationEvent
 			where TResponse : ResponseMessage
 		{
-			tryConnect();
+			TryConnect();
 			return _bus.RespondAsync(responder);
 		}		
 
-		private void tryConnect()
+		private void TryConnect()
 		{
 			if (IsConnected) return;
 
@@ -85,7 +88,21 @@ namespace NS.MessageBus
 				.WaitAndRetry(3, retryAttempt =>
 					TimeSpan.FromSeconds(Math.Pow(2, retryAttempt)));
 
-			policy.Execute( () => { _bus = RabbitHutch.CreateBus(_connectionString); });			
+			policy.Execute( () => 
+			{	
+				_bus = RabbitHutch.CreateBus(_connectionString);
+				//_advancedBus = _bus.Advanced;
+				//_advancedBus.Disconnected += OnDisconnect;
+			});
+		}
+
+		private void OnDisconnect(object s, EventArgs e)
+		{
+			var policy = Policy.Handle<EasyNetQException>()
+				.Or<BrokerUnreachableException>()
+				.RetryForever();
+
+			policy.Execute(TryConnect);
 		}
 
 		public void Dispose()
