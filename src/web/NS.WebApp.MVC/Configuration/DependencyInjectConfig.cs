@@ -7,6 +7,7 @@ using NS.WebApp.MVC.Services;
 using NS.WebApp.MVC.Services.Autenticacao;
 using NS.WebApp.MVC.Services.Catalogo;
 using NS.WebApp.MVC.Services.Handlers;
+using NS.WepApi.Core.Usuario;
 using Polly;
 using System;
 
@@ -38,7 +39,7 @@ namespace NS.WebApp.MVC.Configuration
 
 
 			services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-			services.AddScoped<IUser, AspNetUser>();
+			services.AddScoped<IAspNetUser, AspNetUser>();
 		}
 	}
 }

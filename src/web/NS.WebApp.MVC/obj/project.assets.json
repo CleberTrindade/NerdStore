@@ -593,6 +593,24 @@
         "runtime": {
           "bin/placeholder/NS.Core.dll": {}
         }
+      },
+      "NS.WepApi.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "FluentValidation": "9.0.1",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "3.1.6",
+          "Microsoft.Extensions.Configuration.Abstractions": "3.1.7"
+        },
+        "compile": {
+          "bin/placeholder/NS.WepApi.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/NS.WepApi.Core.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -1715,6 +1733,11 @@
       "type": "project",
       "path": "../../shared/NS.Core/NS.Core.csproj",
       "msbuildProject": "../../shared/NS.Core/NS.Core.csproj"
+    },
+    "NS.WepApi.Core/1.0.0": {
+      "type": "project",
+      "path": "../../shared/NS.WepApi.Core/NS.WepApi.Core.csproj",
+      "msbuildProject": "../../shared/NS.WepApi.Core/NS.WepApi.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1724,6 +1747,7 @@
       "Microsoft.Extensions.Http.Polly >= 3.1.6",
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.10.9",
       "NS.Core >= 1.0.0",
+      "NS.WepApi.Core >= 1.0.0",
       "refit >= 5.1.67"
     ]
   },
@@ -1759,6 +1783,9 @@
           "projectReferences": {
             "D:\\02. Projetos\\NerdStore\\src\\shared\\NS.Core\\NS.Core.csproj": {
               "projectPath": "D:\\02. Projetos\\NerdStore\\src\\shared\\NS.Core\\NS.Core.csproj"
+            },
+            "D:\\02. Projetos\\NerdStore\\src\\shared\\NS.WepApi.Core\\NS.WepApi.Core.csproj": {
+              "projectPath": "D:\\02. Projetos\\NerdStore\\src\\shared\\NS.WepApi.Core\\NS.WepApi.Core.csproj"
             }
           }
         }

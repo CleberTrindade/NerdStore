@@ -22,6 +22,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\shared\NS.Core\NS.Core.csproj" />
+    <ProjectReference Include="..\..\shared\NS.WepApi.Core\NS.WepApi.Core.csproj" />
   </ItemGroup>
 
 </Project>

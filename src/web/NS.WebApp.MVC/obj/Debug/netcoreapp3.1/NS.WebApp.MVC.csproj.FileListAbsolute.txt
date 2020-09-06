@@ -754,3 +754,5 @@ D:\02. Projetos\NerdStoreBk\NerdStore\src\web\NS.WebApp.MVC\obj\Debug\netcoreapp
 D:\02. Projetos\NerdStoreBk\NerdStore\src\web\NS.WebApp.MVC\obj\Debug\netcoreapp3.1\NS.WebApp.MVC.dll
 D:\02. Projetos\NerdStoreBk\NerdStore\src\web\NS.WebApp.MVC\obj\Debug\netcoreapp3.1\NS.WebApp.MVC.pdb
 D:\02. Projetos\NerdStoreBk\NerdStore\src\web\NS.WebApp.MVC\obj\Debug\netcoreapp3.1\NS.WebApp.MVC.genruntimeconfig.cache
+D:\02. Projetos\NerdStore\src\web\NS.WebApp.MVC\bin\Debug\netcoreapp3.1\NS.WepApi.Core.dll
+D:\02. Projetos\NerdStore\src\web\NS.WebApp.MVC\bin\Debug\netcoreapp3.1\NS.WepApi.Core.pdb
